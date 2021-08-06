@@ -1,7 +1,7 @@
 name: 同步cdle's JDC
 on:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '10 11 1-31/1 * *'
   workflow_dispatch:
 jobs:
   merge-branch:
