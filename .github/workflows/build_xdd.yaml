@@ -24,7 +24,7 @@ jobs:
 
     - name: Build
       run: |
-   #       cd ./
+          cd .
           go get github.com/mitchellh/gox
           gox -os "windows linux" -arch "amd64 arm arm64"
           ls
