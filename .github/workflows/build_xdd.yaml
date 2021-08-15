@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2        
       with: 
-        ref: main 
+        ref: xdd 
         persist-credentials: false # 持久凭证设置为false,actions/checkout@v2 需要
     
     - name: Set up Go
@@ -24,7 +24,7 @@ jobs:
 
     - name: Build
       run: |
-          cd ./xdd
+          cd ./
           go get github.com/mitchellh/gox
           gox -os "windows linux" -arch "amd64 arm arm64"
           ls
@@ -32,7 +32,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: xdd/xdd_*
+        file: /xdd_*
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
