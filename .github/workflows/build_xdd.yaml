@@ -1,4 +1,4 @@
-name: Build xdd 815
+name: Build xdd
 
 on:
   push:
