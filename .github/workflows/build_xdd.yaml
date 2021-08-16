@@ -15,8 +15,8 @@ jobs:
       uses: actions/checkout@v2        
       with: 
         ref: xdd 
-        persist-credentials: false # 持久凭证设置为false,actions/checkout@v2 需要
-    
+        persist-credentials: false # 持久凭证设置为false,actions/checkout@v2 需要    
+     
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
@@ -26,7 +26,7 @@ jobs:
       run: |
           cd .
           go get github.com/mitchellh/gox
-          gox -os "windows linux" -arch "amd64 arm arm64"
+          gox -os "windows linux" -arch "linux/amd64 linux/arm/v7 linux/arm64"
           ls
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
