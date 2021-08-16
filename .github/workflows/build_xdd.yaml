@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - name: Checkout
       uses: actions/checkout@v2        
@@ -26,7 +26,7 @@ jobs:
       run: |
           cd .
           go get github.com/mitchellh/gox
-          gox -os "windows linux" -arch "linux/amd64 linux/arm/v7 linux/arm64"
+          gox -os "windows linux" -arch "amd64 arm arm64"
           ls
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
