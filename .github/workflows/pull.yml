@@ -18,5 +18,5 @@ jobs:
         with:
           source_repo: "https://github.com/cdle/xdd.git"
           source_branch: "main"
-          destination_branch: "main"
+          destination_branch: "xdd"
           github_token: ${{ secrets.PAT }}
