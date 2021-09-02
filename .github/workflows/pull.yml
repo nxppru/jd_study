@@ -16,7 +16,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/cdle/xdd.git"
+          source_repo: "https://github.com/xunone11/wsxdd.git"
           source_branch: "main"
-          destination_branch: "xdd"
+          destination_branch: "xdds"
           github_token: ${{ secrets.PAT }}
